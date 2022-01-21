@@ -71,10 +71,8 @@ I used MVVM pattern:
 
 &nbsp; 
 &nbsp; 
+![MVVM](https://user-images.githubusercontent.com/42350093/150475386-464a173a-0556-482a-b9d0-23829e3e7095.png)
 
-<kbd >
- ![MVVM](https://user-images.githubusercontent.com/42350093/150475217-0f3a0557-18df-4740-bb31-beeef74cf557.png)
-</kbd>
 
 </br>
 </br>
