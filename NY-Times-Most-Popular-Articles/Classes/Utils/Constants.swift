@@ -6,3 +6,10 @@
 //
 
 import Foundation
+import UIKit
+
+struct Constants {
+    public static let placeholderImage = #imageLiteral(resourceName: "placeHolder.png")
+    public static let APIKey = "GExcGoUo0aSAm9wm8mLJsiRDSL1eJp2f"
+
+}
