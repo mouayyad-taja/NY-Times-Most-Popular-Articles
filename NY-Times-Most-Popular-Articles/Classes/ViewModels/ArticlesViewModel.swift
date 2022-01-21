@@ -12,7 +12,7 @@ import Alamofire
 class ArticlesViewModel {
     
     //Api reference
-    private var apiService : ArticleServcieProtocol!
+    private var apiService : ArticleServcieProtocol?
     
     //stories dataSource
     private(set) weak var dataSource : GenericDataSource<Article>?
@@ -21,14 +21,14 @@ class ArticlesViewModel {
     private(set) var error : DynamicValue<Error?> = DynamicValue<Error?>(nil)
     
     //MARK: Initialization
-    init(dataSource : GenericDataSource<Article>, apiService: ArticleServcieProtocol = ArticleServcie()) {
+    init(dataSource : GenericDataSource<Article>?, apiService: ArticleServcieProtocol? = ArticleServcie()) {
         self.dataSource = dataSource
         self.apiService = apiService
     }
     
     //Get list articles
     func getArticles(_ completion: ((Result<[Article], Error>)->Void)? = nil){
-        self.apiService.fetchArticles(){
+        self.apiService?.fetchArticles(){
             result in
             switch result {
             case .success(let item):
