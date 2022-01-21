@@ -35,4 +35,13 @@ struct Article: Codable {
     var imageUrl: String?{
         return self.media?.first?.mediaMetadata?.first?.url ?? nil
     }
+    
+    var largeImageUrl: String?{
+        if let meta = self.media?.first?.mediaMetadata?.first(where: { meta in
+            return (meta.height ?? 0) > 150
+        }){
+            return meta.url ?? nil
+        }
+        return imageUrl
+    }
 }

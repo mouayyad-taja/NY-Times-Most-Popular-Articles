@@ -93,7 +93,7 @@ class ArticlesVC: BaseVC {
 
     // MARK: - Methods
     func openArticleDetails(article: Article) {
-        //TODO
+        pushArticleDetailVC(article: article)
     }
     
     // MARK: - GetData
